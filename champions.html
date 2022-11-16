@@ -20,8 +20,8 @@
     <title>Champions</title>
   </head>
   <body>
-    <audio src="_sound/league-of-legends.mp3" loop autoplay></audio>
-    <audio id="welcome-league-of-legends" src="_sound/welcome-league-of-legends.mp3" autoplay></audio>
+    <audio id="sound-effect" src="_sound/league-of-legends.mp3" loop autoplay></audio>
+    <audio id="sound-effect-voice" src="_sound/welcome-league-of-legends.mp3"  autoplay></audio>
     <header>
       <ul class="nav">
         <li><a class="href-header" href="index.html">Home</a></li>
@@ -81,9 +81,17 @@
 </script>
 <script>
   function stopAudio(){
-    document.getElementById("audio").pause();
+  document.getElementById("audio").pause();
   document.getElementById("audio").currentTime = 0
 }
+</script>
+<script>
+   let audio = document.getElementById("sound-effect");
+  audio.volume = 0.2;
+</script>
+<script>
+   let audio = document.getElementById("sound-effect-voice");
+  audio.volume = 0.01;
 </script>
   </body>
 </html>
