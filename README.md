@@ -2,14 +2,8 @@
 
 pag-home
 
-![Screenshot_20221118_104016](https://user-images.githubusercontent.com/92491382/202828475-081933ca-ca9f-4559-8fb3-45233ac78d1f.png)
-pag-home
 
-![Screenshot_20221118_104044](https://user-images.githubusercontent.com/92491382/202828478-a069efd7-e70c-4b72-a6ad-505beb4fb575.png)
-
-pag-home
-
-![Screenshot_20221118_104107](https://user-images.githubusercontent.com/92491382/202828482-5d480990-197f-49e9-abd2-bf3a2705219f.png)
+![pag-home](https://user-images.githubusercontent.com/92491382/202830085-328ed14c-1263-4fe3-862a-837ad9e2eebc.png)
 
 pag-champions
 
