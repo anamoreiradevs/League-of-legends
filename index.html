@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/_css/index.css" />
+    <link rel="stylesheet" href="_css/index.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,200&family=Quintessential&display=swap"
@@ -14,6 +14,11 @@
   <body>
     <header>
       <a href="#" class="logo">Game On</a>
+      <ul class="nav">
+        <li><a class="nav-a" id="home" href="index.html">Home</a> </li>
+        <li><a class="nav-a"  href="#fire">Fire</a></li>
+        <li><a class="nav-a" href="feedback.html">Feedback</a></li>
+      </ul>
     </header>
     <div class="banner">
       <div class="bg">
@@ -27,17 +32,104 @@
             destroy towers as you fight your way to victory.
           </p>
           <div class="buttons">
-             <a class="btn-play-now"  href="champions.html">Play Now</a>
+            <a class="btn-play-now"  href="champions.html">Play Now</a>
             <ion-icon name="logo-windows"></ion-icon></a>
             <ion-icon name="logo-apple"></ion-icon></ion-icon></a>
           </div>
         </div>
-        <img src="/_img/image.png" alt="banner-img" />
+        <img src="_img/image.png" alt="banner-img" />
     </div>
-    
-    <script
+  </div>
+  <div class="about-game" id="fire">
+    <div class="contentBox">  
+      <h1>ranked emblems</h1>
+        <img src="_img/ranked-emblems/Emblem_Bronze.png" alt="">
+        <img src="_img/ranked-emblems/Emblem_Challenger.png" alt="">
+        <img src="_img/ranked-emblems/Emblem_Diamond.png" alt="">
+        <img src="_img/ranked-emblems/Emblem_Gold.png" alt="">
+        <img src="_img/ranked-emblems/Emblem_Grandmaster.png" alt="">
+        <img src="_img/ranked-emblems/Emblem_Iron.png" alt="">
+        <img src="_img/ranked-emblems/Emblem_Master.png" alt="">
+        <img src="_img/ranked-emblems/Emblem_Platinum.png" alt="">
+        <img src="_img/ranked-emblems/Emblem_Silver.png" alt="">
+      <p>League of Legends has a ranking system called the League system, 
+      matching players of a similar skill level to play with and against each other. It comprises nine tiers which indicate the skill level of players. 
+      Players within each division are ranked using a system of points called League Points (LP).
+      Players can monitor their league standings in their profile.</p>
+    </div>
+    <div class="content-champions">
+      <div class="content-img">
+        <h1>most popular champions</h1>
+        <img  src="_img/champions/Ashe_0.jpg" alt=""> 
+        <img src="_img/champions/Ezreal_0.jpg" alt="">
+        <img src="_img/champions/Sivir_0.jpg" alt="">
+        <img src="_img/champions/Yone_0.jpg" alt="">
+        <p>Play with the most popular champions in the league of legends. Ashe, Ezreal, Sivir and Yone are waiting for you</p>
+      </div>
+    </div>
+  </div>
+  <div class="news-letter">
+    <div class="news-letter-box">  
+    </div>
+    <div class="news-letter-content">
+      <div class="news-letter-form">
+        <h1>Join us and receive exclusive items</h1>
+        <form class="email-box" onsubmit="sendEmail(); reset(); return false;">
+          <ion-icon  name="mail-sharp"></ion-icon>
+          <input class="tbox" type="text" id="email" placeholder="Enter your email" required>
+          <button id="send" type="submit" name="button">Join</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  <footer class="footer navbar-fixed-bottom">
+    <div class="footer-container">
+      <ul class="redes-sociais">
+        <li>
+          <a class="a-footer" href="https://www.instagram.com/ana.lymm/"
+            ><ion-icon name="logo-instagram"></ion-icon
+          ></a>
+          <a class="a-footer" href="#"
+            ><ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy;2022 Ana Lydia Moreira</p>
+    </div>
+</footer>
+  <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"
+  ></script>
+    <script src="_js/library.js"></script>
+   <script src="_js/main.js"></script>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script>
+    function sendEmail() 
+    { Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "analydiamoreira965@gmail.com",
+        Password: "C9266A5DEA3133482F29C34D6CBAD1ABF276",
+        To: document.getElementById("email").value,
+        From: "analydiamoreira965@gmail.com",
+        Subject: "League Of Legends",
+        Body: "Email: " + document.getElementById("email").value +
+        "<br> Successfully Registered",
+      }).then((message) => alert("Successfully Registered"));
+    }
+  </script>
   </body>
 </html>

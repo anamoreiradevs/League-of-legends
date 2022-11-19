@@ -1,0 +1,94 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="_css/feedback.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be Pro Player</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Game On</a>
+      <ul class="nav">
+        <li><a class="nav-a" id="home" href="index.html">Home</a></li>
+        <li><a class="nav-a" href="champions.html">Play</a></li>
+        <li><a class="nav-a" href="feedback.html">Feedback</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="video">
+        <iframe
+          width="1000"
+          height="500"
+          src="https://www.youtube.com/embed/D07FxBwxZ64"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <div class="container-form">
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Want to be a pro player? Sign Up</h3>
+        <input type="text" name="" id="name" placeholder="Your Name" required />
+        <input type="text" name="" id="email" placeholder="Email" required />
+        <input type="phone" name=""id="phone" placeholder="Phone Number" required
+        />
+        <textarea
+          name=""
+          id="message"
+          rows="4"
+          placeholder="Let us know more about you"
+        ></textarea>
+        <button id="send" type="submit">Send</button>
+      </form>
+    </div>
+    <footer class="footer navbar-fixed-bottom">
+      <div class="footer-container">
+        <ul class="redes-sociais">
+          <li>
+            <a class="a-footer" href="https://www.instagram.com/ana.lymm/"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+            <a class="a-footer" href="#"
+              ><ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2022 Ana Lydia Moreira</p>
+      </div>
+  </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() 
+      { Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "analydiamoreira965@gmail.com",
+        Password: "C9266A5DEA3133482F29C34D6CBAD1ABF276",
+        To: document.getElementById("email").value,
+        From: "analydiamoreira965@gmail.com",
+        Subject: "League Of Legends - Congratulation!!!",
+          Body: "Name: " + document.getElementById("name").value +
+          "<br> We are happy that you are interested in being a pro player, we will contact you soon",
+        }).then((message) => alert("Successfully Registered"));
+      }
+    </script>
+  </body>
+</html>

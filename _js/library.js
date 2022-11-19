@@ -14,5 +14,4 @@ const getAPI = (url, functionCallback) => {
             erro => console.error(erro) // reject (erro no retorno)
             ); 
 }
-
     
